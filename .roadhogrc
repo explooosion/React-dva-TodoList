@@ -1,0 +1,27 @@
+{
+  "entry": "src/index.js",
+  "extraBabelPlugins": [
+    "syntax-dynamic-import", // import插件支持
+    "transform-runtime",
+    [
+      "import",
+      {
+        "libraryName": "antd",
+        "style": true
+      }
+    ]
+  ],
+  "env": {
+    "development": {
+      "extraBabelPlugins": [
+        "dva-hmr",
+        "transform-runtime"
+      ]
+    },
+    "production": {
+      "extraBabelPlugins": [
+        "transform-runtime"
+      ]
+    }
+  }
+}
